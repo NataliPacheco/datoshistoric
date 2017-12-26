@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>PNPC PRUEBA</title>
@@ -116,7 +115,7 @@
     <div class="col-sm-4" style="background-color:#FFFFFF">
         <center> 
         <p>Numero de  referencia</p>
-      <input type="number">
+      <input id="numeroreferencia" type="number" name="num" min="6" max="6">
         </center>      
       </div>
       <!--datod del programa para la busqueda-->
@@ -151,14 +150,14 @@
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center><p>CVU Evaluador</p> 
-        <input type="text"><center>
+        <input id="cvuevaluador" type="text"><center>
       </div>
 
        <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center><p>Fecha de Evaluación</p>
-      <select id="dependencia">
+      <select id="fechaevaluacion">
         <option value="">Selecciona una opcion</option> 
-      <select id="grado">    
+      </select>    
        </div>
     </div>
   </div> 
@@ -169,7 +168,7 @@
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center><p>Estatus Dictamen</p>
-      <select id="entidad">
+      <select id="estatusdictamen">
         <option value="">Selecciona una opcion</option>
       </select></center>
       </div>
@@ -177,7 +176,7 @@
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center>
         <p>Nivel</p> 
-        <select id="estatusdictamen">
+        <select id="nivel">
           <option value="">Selecciona una opcion</option>
         </select>
         </center>
@@ -185,8 +184,7 @@
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center>
         <p>Institucion</p> 
-        <input type="text">
-          
+        <input id="institucion"type="text">          
         </select>
         </center>
       </div>
