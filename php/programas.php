@@ -36,33 +36,7 @@ include("conexion.php");
     } 
     echo json_encode($json);
 
-    //seleccionar todo de la tabla programas
-    $query = "SELECT * FROM programas";
-
-    $resultado = mysql_query($query);
-
-    //contar el total de registros
-
-    $total_registros = mysql_num_rows($resultado);
-
-    //usando ceil para dividir el total de registro enre $por_pagina
-
-    $total_paginas = ceil($total_registros / $por_pagina);
-
-    // link a primera pagina
-
-    echo"<a href='paginacion.php?pagina=1'>". 'Primera' ."</a>";
-
-    $paginas = '';
-    for($i=1; $i<=$total_paginas; $i++){
-    	$paginas .= "<a href='paginacion.php?pagina=".$i."'>".$i."</a";
-    }
-    echo $paginas;
-  
-
-  //link a la ultima pagina
-
-  echo"<a href='paginacion.php?pagina=$total_paginas'>".'Ultima'."</a>";    
+      
 
 
 ?>
