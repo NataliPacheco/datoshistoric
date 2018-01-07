@@ -18,9 +18,7 @@ include("conexion.php");
     $empieza = ($pagina-1) * $por_pagina;
 
 
-    $query = "SELECT programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,
-       cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,cat_dictamen.estatus,
-       cat_nivel.nombre_nivel,cat_institucion.nombre_institucion FROM programas 
+    $query = "SELECT programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,cat_convocatoria.id_convocatoria,cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,comite.id_comite,cat_dictamen.estatus, cat_dictamen.id_dictamen, cat_nivel.id_nivel,cat_nivel.nombre_nivel,cat_institucion.nombre_institucion,cat_institucion.id_institucion FROM programas 
     inner join cat_convocatoria  on programas.id_convocatoria = cat_convocatoria.id_convocatoria
     inner join cat_institucion on programas.id_institucion = cat_institucion.id_institucion
     inner join cat_evaluadores on programas.cvu_evaluador = cat_evaluadores.cvu_evaluador
