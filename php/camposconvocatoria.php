@@ -1,5 +1,4 @@
 <?php
-
 //Establecer conexion con la base de datos
     include("conexion.php");
     $json=array();
