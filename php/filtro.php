@@ -14,42 +14,42 @@ $institucion=$_POST["institucion"];
  
  if ($num_ref) {
 
- 	$agregar .= $num_ref."and ";
+ 	$agregar .= "num_referencia= '".$num_ref."' and ";
  }
 
  if ($convocatoria) {
 
- 	$agregar .= $convocatoria."and ";
+ 	$agregar .= "id_convocatoria= '".$convocatoria."' and ";
  }
 
  if ($nombre_eva) {
 
- 	$agregar .= $nombre_eva."and ";
+ 	$agregar .= "cvu_evaluador= '".$nombre_eva."' and ";
  }
 
  if ($cvu_evalu) {
 
- 	$agregar .= $cvu_evalu."and ";
+ 	$agregar .= "cvu_evaluador= '".$cvu_evalu."' and ";
  }
 
  if ($fecha_eva) {
 
- 	$agregar .= $fecha_eva."and ";
+ 	$agregar .= "id_comite= '".$fecha_eva."' and ";
  }
 
  if ($dictamen) {
 
- 	$agregar .= $dictamen."and ";
+ 	$agregar .= "id_dictamen= '".$dictamen."' and ";
  }
 
  if ($nivel) {
 
- 	$agregar .= $nivel."and ";
+ 	$agregar .= "id_nivel= '".$nivel."' and ";
  }
 
 if ($institucion) {
 
-	$agregar .= $institucion;
+	$agregar .= "id_institucion= '".$institucion."'";
 } 
 
  
