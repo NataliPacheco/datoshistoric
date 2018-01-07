@@ -2,7 +2,8 @@
 //Establecer conexion con la base de datos   
    include("conexion.php");
    $json=array();
-   $consulta = mysql_query("SELECT * FROM cat_convocatoria",$con) or die ("No se puede realizar la consulta");
+   $consulta = mysql_query("SELECT cat_convocatoria.nombre_convocatoria, cat_clasificacion.nombre_clasificacion FROM cat_convocatoria
+   	    inner join cat_clasificacion on cat_convocatoria.id_clasificacion = cat_clasificacion.id_clasificacion",$con) or die ("No se puede realizar la consulta");
 
    while ($row=mysql_fetch_assoc($consulta)) {
 
