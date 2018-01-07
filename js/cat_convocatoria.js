@@ -1,8 +1,12 @@
- $.get("cat_convocatoria.php")
-    .success(function(data) {
-    	console.log(data)
-    })
-    .error(function(data){
-        console.log(data);
-   
+  $.get("php/convocatoria.php",function(data) {
+    	//console.log(data);
+    	data=JSON.parse(data);
+    	var convoca="";
+    	data.forEach(function(index,valor){
+    			convoca += "<option>"+index.nombre_convocatoria+"</option>"
+    		
+    	});
+    		$("#convocatoria").append(convoca)
+    		//console.log(convoca);
+    	//$("#").append(data)
     });

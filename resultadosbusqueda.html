@@ -9,6 +9,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <<script src="js/programas.js"></script>
+  <<script src="js/cat_dictamen.js"></script>
+  <<script src="js/cat_nivel.js"></script>
+  <<script src="js/cat_convocatoria.js"></script>
    <!--ini estilo tabla-->
    <style>  
     table {
@@ -131,27 +134,22 @@
         </div>
      <div class="modal-body">
     <div class="row">
-    <div class="col-sm-4" style="background-color:#FFFFFF">
-        <center> 
+    <div class="col-sm-4" style="background-color:#FFFFFF"> 
         <p>Numero de  referencia</p>
-      <input type="number" name="num" min="6" max="6">
-        </center>      
+      <input type="number" name="num" min="6" max="6" class="form-control">     
       </div>
       <!--datod del programa para la busqueda-->
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <center>
         <p>Nombre del Programa</p>
-              <select id="nombreprograma">
-          <option type=text value="">Selecciona una opcion</option>
-         </select></center>
+              <input type="text-align" name="">
       </div>
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center><p>Convocatoria</p>
-      <select id="convocatoria">
+      <p>Convocatoria</p>
+      <select id="convocatoria" class="form-control">
           <option value="">Selecciona una opcion</option>
       </select>
-        </center>
        </div>
     </div>
   </div>     
@@ -160,21 +158,18 @@
     <div class="row"> 
    
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center><p>Nombre Evaluador</p>
-      <select id="nombreevaluador">
-          <option value="">Selecciona una opcion</option></option>
-      </select>
-        </center>
+      <p>Nombre Evaluador</p>
+     <input type="text-align" name="">
       </div>
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center><p>CVU Evaluador</p> 
-        <input type="text"><center>
+      <p>CVU Evaluador</p> 
+        <input type="text" class="form-control">
       </div>
 
        <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center><p>Fecha de Evaluación</p>
-      <select id="dependencia">
+      <p>Fecha de Evaluación</p>
+      <select id="dependencia" class="form-control">
         <option value="">Selecciona una opcion</option> 
       <select id="grado">    
        </div>
@@ -186,26 +181,22 @@
     <div class="row">
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center><p>Estatus Dictamen</p>
-      <select id="entidad">
+     <p>Estatus Dictamen</p>
+      <select id="dictamen" class="form-control">
         <option value="">Selecciona una opcion</option>
-      </select></center>
+      </select>
       </div>
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center>
         <p>Nivel</p> 
-        <select id="estatusdictamen">
+        <select id="nivel" class="form-control">
           <option value="">Selecciona una opcion</option>
-        </select>
-        </center>
+        </select> 
       </div>
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <center>
         <p>Institucion</p> 
-        <input type="text">          
+        <input type="text" class="form-control">          
         </select>
-        </center>
       </div>
 
       <div class="modal-footer">

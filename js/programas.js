@@ -18,6 +18,6 @@
     		$("#resultados").append(datos)
     		
     	});
-    		console.log(datos);
+    		//console.log(datos);
     	//$("#").append(data)
     });

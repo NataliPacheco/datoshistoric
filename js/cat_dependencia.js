@@ -1,4 +1,5 @@
- $.get("cat_dependencia.php")
+
+ $.get("php/dependencia.php")
     .success(function(data) {
     	console.log(data)
     })
