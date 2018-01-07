@@ -136,7 +136,7 @@
     <div class="row">
     <div class="col-sm-4" style="background-color:#FFFFFF"> 
         <p>Numero de  referencia</p>
-      <input type="number" name="num" min="6" max="6" class="form-control">     
+      <input type="number" id="num_ref" name="num" min="6" max="6" class="form-control">     
       </div>
       <!--datod del programa para la busqueda-->
       <div class="col-sm-4"  style="background-color:#FFFFFF">
@@ -159,19 +159,17 @@
    
       <div class="col-sm-4"  style="background-color:#FFFFFF">
       <p>Nombre Evaluador</p>
-     <input type="text-align" name="">
+     <input id="nombre_eva" type="text-align" name="">
       </div>
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
       <p>CVU Evaluador</p> 
-        <input type="text" class="form-control">
+        <input type="text" id="cvu_evalu" class="form-control">
       </div>
 
        <div class="col-sm-4"  style="background-color:#FFFFFF">
       <p>Fecha de Evaluación</p>
-      <select id="dependencia" class="form-control">
-        <option value="">Selecciona una opcion</option> 
-      <select id="grado">    
+     <input type="text-align" id="fecha_eva" name="">   
        </div>
     </div>
   </div> 
@@ -195,12 +193,12 @@
       </div>
       <div class="col-sm-4"  style="background-color:#FFFFFF">
         <p>Institucion</p> 
-        <input type="text" class="form-control">          
+        <input id="institucion" type="text" class="form-control">          
         </select>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" href="">Buscar</button>
+        <button type="button" id="buscar" class="btn btn-default" data-dismiss="modal" href="">Buscar</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           </div>
       </div>
