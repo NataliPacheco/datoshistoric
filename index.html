@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+<html lang="en">
+<head>
+  <title>PNPC Inicio de sesiòn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--inicio menu-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">PNPC</a>
+    </div>
+    
+  </div>
+</nav> <!--menu-->
+<!--inicio carrousel-->
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <center><img src="file:///C|/XAM/htdocs/hitorialpnpc/html/Imagenes/PNPC1.png" width="1349" height="297" alt=""/></center>
+          <div class="carousel-caption">
+        </div>      
+        </div>
+
+        <div class="item">
+          <center><img src="file:///C|/XAM/htdocs/hitorialpnpc/html/Imagenes/PNPC2.png" width="1149" height="297" alt="Image"></center>
+          <div class="carousel-caption">
+            </div>      
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div> <!--fin carrousel-->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2><center> Inicio sesión  </center></h2>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+  <form action="/action_page.php">
+    <div>
+      <center><img src="C:\XAM\htdocs\hitorialpnpc\html\Imagenes\avatar.png" alt="50" class="50"></center>
+    </div>
+
+    <div class="container">
+      <label><b>Usuario:</b></label>
+      <input type="text" placeholder="ingresar nombre" name="uname" required>
+
+      <label><b>Contraseña:</b></label>
+      <input type="password" placeholder="ingresar contraseña" name="psw" required>
+          
+      <button class="btn btn-info btn-lg" type="submit">Inicio</button>
+      
+    </div>
+    
+    </div>
+  </form>
+
+</body>
+</html>
