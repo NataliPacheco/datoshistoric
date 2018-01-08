@@ -14,42 +14,42 @@ $institucion=$_POST["institucion"];
  
  if ($num_ref) {
 
- 	$agregar .= "num_referencia= '".$num_ref."' and ";
+ 	$agregar .= "programas.num_referencia= '".$num_ref."' and ";
  }
 
  if ($convocatoria) {
 
- 	$agregar .= "id_convocatoria= '".$convocatoria."' and ";
+ 	$agregar .= "programas.id_convocatoria= '".$convocatoria."' and ";
  }
 
  if ($nombre_eva) {
 
- 	$agregar .= "cvu_evaluador= '".$nombre_eva."' and ";
+ 	$agregar .= "programas.cvu_evaluador= '".$nombre_eva."' and ";
  }
 
  if ($cvu_evalu) {
 
- 	$agregar .= "cvu_evaluador= '".$cvu_evalu."' and ";
+ 	$agregar .= "programas.cvu_evaluador= '".$cvu_evalu."' and ";
  }
 
  if ($fecha_eva) {
 
- 	$agregar .= "id_comite= '".$fecha_eva."' and ";
+ 	$agregar .= "programas.id_comite= '".$fecha_eva."' and ";
  }
 
  if ($dictamen) {
 
- 	$agregar .= "id_dictamen= '".$dictamen."' and ";
+ 	$agregar .= "programas.id_dictamen= '".$dictamen."' and ";
  }
 
  if ($nivel) {
 
- 	$agregar .= "id_nivel= '".$nivel."' and ";
+ 	$agregar .= "programas.id_nivel= '".$nivel."' and ";
  }
 
 if ($institucion) {
 
-	$agregar .= "id_institucion= '".$institucion."'";
+	$agregar .= "programas.id_institucion= '".$institucion."'";
 } 
 
 //print_r(explode(" ", $agregar, -1));
@@ -64,7 +64,7 @@ $consulta=mysql_query("SELECT programas.num_referencia,programas.nombre_programa
     inner join cat_evaluadores on programas.cvu_evaluador = cat_evaluadores.cvu_evaluador
     inner join comite on programas.id_comite = comite.id_comite
     inner join cat_dictamen on programas.id_dictamen = cat_dictamen.id_dictamen
-    inner join cat_nivel on programas.id_nivel = cat_nivel.id_nivel order by id_programa  LIMIT $empieza, $por_pagina WHERE $agregar",$con) or die ("No se puede realizar la consulta");
+    inner join cat_nivel on programas.id_nivel = cat_nivel.id_nivel WHERE $agregar order by programas.id_programa",$con) or die ("No se puede realizar la consulta");
 
 while($row=mysql_fetch_assoc($consulta)) {
 
