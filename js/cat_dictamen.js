@@ -3,7 +3,7 @@
     	data=JSON.parse(data);
     	var estatus="";
     	data.forEach(function(index,valor){
-    		estatus += "<option> value '"+index.id_dictamen+"'>"+index.estatus+"</option>"
+    		estatus += "<option value='"+index.id_dictamen+"'>"+index.estatus+"</option>"
     		
     	});
     		$("#dictamen").append(estatus)

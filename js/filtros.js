@@ -4,7 +4,7 @@
 	data:
 	})"*/
 $("#buscar").click(function() {
-	console.log("fil");
+	console.log($("#nivel").val());
 	$.ajax({
 	url:"php/filtro.php",
 	type:"post",
