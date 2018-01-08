@@ -17,6 +17,7 @@ $("#buscar").click(function() {
 		dictamen:$("#dictamen").val(),
 		nivel:$("#nivel").val(),
 		institucion:$("#institucion").val(),
+		nom_programa:$("#nom_programa").val(),
 
 	},
 	success: function(data) {
