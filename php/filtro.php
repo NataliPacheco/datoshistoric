@@ -11,6 +11,7 @@ $fecha_eva=$_POST["fecha_eva"];
 $dictamen=$_POST["dictamen"];
 $nivel=$_POST["nivel"];
 $institucion=$_POST["institucion"];
+$nom_programa=$_POST["nom_programa"];
  
  if ($num_ref) {
 
@@ -49,18 +50,26 @@ $institucion=$_POST["institucion"];
 
 if ($institucion) {
 
-	$agregar .= "programas.id_institucion= '".$institucion."'";
+	$agregar .= "programas.id_institucion= '".$institucion."' and ";
 } 
 
+<<<<<<< HEAD
 } 
 
+=======
+
+if ($nom_programa) {
+
+    $agregar .= "programas.nom_programa= '".$nom_programa."'";
+} 
+>>>>>>> 06ec1a06f04bcf9c6c6699158465527a1f8fbe00
 //print_r(explode(" ", $agregar, -1));
 if ("and" == array_slice(explode(" ",$agregar,-1), -1)[0]) {
 	$agregar = substr($agregar, 0, -5);
 }
 //echo $agregar."\n";
 
-$consulta=mysql_query("SELECT programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,cat_convocatoria.id_convocatoria,cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,comite.id_comite,cat_dictamen.estatus, cat_dictamen.id_dictamen, cat_nivel.id_nivel,cat_nivel.nombre_nivel,cat_institucion.nombre_institucion,cat_institucion.id_institucion FROM programas 
+$consulta=mysql_query("SELECT  programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,cat_convocatoria.id_convocatoria,cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,comite.id_comite,cat_dictamen.estatus, cat_dictamen.id_dictamen, cat_nivel.id_nivel,cat_nivel.nombre_nivel,cat_institucion.nombre_institucion,cat_institucion.id_institucion FROM programas 
     inner join cat_convocatoria  on programas.id_convocatoria = cat_convocatoria.id_convocatoria
     inner join cat_institucion on programas.id_institucion = cat_institucion.id_institucion
     inner join cat_evaluadores on programas.cvu_evaluador = cat_evaluadores.cvu_evaluador
