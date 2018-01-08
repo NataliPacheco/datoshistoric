@@ -52,7 +52,11 @@ if ($institucion) {
 	$agregar .= "id_institucion= '".$institucion."'";
 } 
 
- 
+//print_r(explode(" ", $agregar, -1));
+if ("and" == array_slice(explode(" ",$agregar,-1), -1)[0]) {
+	$agregar = substr($agregar, 0, -5);
+}
+//echo $agregar."\n";
 
 $consulta=mysql_query("SELECT * FROM programas WHERE $agregar",$con) or die ("No se puede realizar la consulta");
 

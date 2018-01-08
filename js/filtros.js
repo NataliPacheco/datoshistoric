@@ -3,8 +3,8 @@
 	type:"post",
 	data:
 	})"*/
-
 $("#buscar").click(function() {
+	console.log("fil");
 	$.ajax({
 	url:"php/filtro.php",
 	type:"post",
@@ -37,7 +37,8 @@ $("#buscar").click(function() {
 
     		datos+="</tr>";
     		$("#resultados").append(datos)
-		console.log(data)
+    		
+    	});
 	}
 	});
 })
