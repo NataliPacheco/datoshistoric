@@ -53,16 +53,13 @@ if ($institucion) {
 	$agregar .= "programas.id_institucion= '".$institucion."' and ";
 } 
 
-<<<<<<< HEAD
-} 
 
-=======
 
 if ($nom_programa) {
 
     $agregar .= "programas.nom_programa= '".$nom_programa."'";
 } 
->>>>>>> 06ec1a06f04bcf9c6c6699158465527a1f8fbe00
+
 //print_r(explode(" ", $agregar, -1));
 if ("and" == array_slice(explode(" ",$agregar,-1), -1)[0]) {
 	$agregar = substr($agregar, 0, -5);
