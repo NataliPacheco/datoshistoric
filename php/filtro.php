@@ -65,7 +65,7 @@ if ("and" == array_slice(explode(" ",$agregar,-1), -1)[0]) {
 	$agregar = substr($agregar, 0, -5);
 }
 //echo $agregar."\n";
-
+echo $agregar;
 $consulta=mysql_query("SELECT  programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,cat_convocatoria.id_convocatoria,cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,comite.id_comite,cat_dictamen.estatus, cat_dictamen.id_dictamen, cat_nivel.id_nivel,cat_nivel.nombre_nivel,cat_institucion.nombre_institucion,cat_institucion.id_institucion FROM programas 
     inner join cat_convocatoria  on programas.id_convocatoria = cat_convocatoria.id_convocatoria
     inner join cat_institucion on programas.id_institucion = cat_institucion.id_institucion
