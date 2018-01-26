@@ -1,7 +1,7 @@
  $.get("php/programas.php",function(data) {
     	//console.log(data);
     	data=JSON.parse(data);
-    	var datos="";
+    	var datos="nombre_evaluador";
     	data.forEach(function(index,valor){
     		datos="<tr>";
     			datos += "<td>"+index.num_referencia+"</td>"

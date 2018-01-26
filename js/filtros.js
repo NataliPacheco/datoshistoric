@@ -4,7 +4,7 @@
 	data:
 	})"*/
 $("#buscar").click(function() {
-	console.log($("#nom_programa").val());
+	console.log($("").val());
 	$.ajax({
 	url:"php/filtro.php",
 	type:"post",

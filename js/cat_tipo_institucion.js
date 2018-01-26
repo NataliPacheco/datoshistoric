@@ -1,4 +1,4 @@
- $.get("php/cat_tipo_institucion.php")
+ $.get("cat_tipo_institucion.php")
     .success(function(data) {
     	console.log(data)
     })

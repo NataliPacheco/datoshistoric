@@ -1,5 +1,5 @@
 
- $.get("php/dependencia.php")
+ $.get("dependencia.php")
     .success(function(data) {
     	console.log(data)
     })
