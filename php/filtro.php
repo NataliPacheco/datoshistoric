@@ -56,7 +56,7 @@ if ($institucion) {
 
 if ($nom_programa) {
 
-    $agregar .= "programas.nom_programa LIKE '%".$nom_programa."%'";
+    $agregar .= "programas.nombre_programa LIKE '%".$nom_programa."%'";
 } 
 
 //print_r(explode(" ", $agregar, -1));
