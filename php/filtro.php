@@ -15,57 +15,57 @@ $nom_programa=$_POST["nom_programa"];
  
  if ($num_ref) {
 
- 	$agregar .= "programas.num_referencia= '".$num_ref."' and ";
+ 	$agregar .= "programas.num_referencia LIKE '%".$num_ref."%' and ";
  }
 
  if ($convocatoria) {
 
- 	$agregar .= "programas.id_convocatoria= '".$convocatoria."' and ";
+ 	$agregar .= "programas.id_convocatoria LIKE '%".$convocatoria."%' and ";
  }
 
  if ($nombre_eva) {
 
- 	$agregar .= "programas.cvu_evaluador= '".$nombre_eva."' and ";
+ 	$agregar .= "cat_evaluadores.nombre_evaluador LIKE '%".$nombre_eva."%' and ";
  }
 
  if ($cvu_evalu) {
 
- 	$agregar .= "programas.cvu_evaluador= '".$cvu_evalu."' and ";
+ 	$agregar .= "programas.cvu_evaluador LIKE '%".$cvu_evalu."%' and ";
  }
 
  if ($fecha_eva) {
 
- 	$agregar .= "programas.id_comite= '".$fecha_eva."' and ";
+ 	$agregar .= "comite.fecha_comite LIKE '%".$fecha_eva."%' and ";
  }
 
  if ($dictamen) {
 
- 	$agregar .= "programas.id_dictamen= '".$dictamen."' and ";
+ 	$agregar .= "programas.id_dictamen LIKE '%".$dictamen."%' and ";
  }
 
  if ($nivel) {
 
- 	$agregar .= "programas.id_nivel= '".$nivel."' and ";
+ 	$agregar .= "programas.id_nivel LIKE '%".$nivel."%' and ";
  }
 
 if ($institucion) {
 
-	$agregar .= "programas.id_institucion= '".$institucion."' and ";
+	$agregar .= "cat_institucion.nombre_institucion LIKE '%".$institucion."%' and ";
 } 
-
 
 
 if ($nom_programa) {
 
-    $agregar .= "programas.nom_programa= '".$nom_programa."'";
+    $agregar .= "programas.nom_programa LIKE '%".$nom_programa."%'";
 } 
 
 //print_r(explode(" ", $agregar, -1));
+
 if ("and" == array_slice(explode(" ",$agregar,-1), -1)[0]) {
 	$agregar = substr($agregar, 0, -5);
 }
 //echo $agregar."\n";
-echo $agregar;
+//echo $agregar;
 $consulta=mysql_query("SELECT  programas.num_referencia,programas.nombre_programa,cat_convocatoria.nombre_convocatoria,cat_convocatoria.id_convocatoria,cat_evaluadores.nombre_evaluador,cat_evaluadores.cvu_evaluador, comite.fecha_comite,comite.id_comite,cat_dictamen.estatus, cat_dictamen.id_dictamen, cat_nivel.id_nivel,cat_nivel.nombre_nivel,cat_institucion.nombre_institucion,cat_institucion.id_institucion FROM programas 
     inner join cat_convocatoria  on programas.id_convocatoria = cat_convocatoria.id_convocatoria
     inner join cat_institucion on programas.id_institucion = cat_institucion.id_institucion

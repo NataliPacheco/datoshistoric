@@ -21,8 +21,10 @@ $("#buscar").click(function() {
 
 	},
 	success: function(data) {
+		console.log(data)
 		$("#resultados").empty();
-		data=JSON.parse(data);
+		data = JSON.parse(data);
+		console.log(data);
     	var datos="";
     	data.forEach(function(index,valor){
     		datos="<tr>";
