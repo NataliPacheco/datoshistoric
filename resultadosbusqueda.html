@@ -13,7 +13,7 @@
   <script src="js/cat_nivel.js"></script>
   <script src="js/cat_convocatoria.js"></script>
 
-   <!--ini estilo tabla-->
+   <!--inicio estilo tabla-->
    <style>  
     table {
         font-family: arial, sans-serif;
@@ -51,6 +51,21 @@
       }
     }
   </style>
+  <!--inicio estilo de paginacion-->
+  <style>
+.paginacion {
+    display: inline-block;
+}
+
+.paginacion a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+</style>
+  <!--fin estilo de paginacion-->
+
 </head>
 <body>
 <!--inicio menu-->
@@ -159,7 +174,7 @@
    
       <div class="col-sm-4"  style="background-color:#FFFFFF">
       <p>Nombre Evaluador</p>
-     <input id="nombre_eva" type="text-align" name="">
+     <input id="nombre_eva" type="text-align" class="form-control">
       </div>
 
       <div class="col-sm-4"  style="background-color:#FFFFFF">
@@ -192,22 +207,43 @@
         </select> 
       </div>
       <div class="col-sm-4"  style="background-color:#FFFFFF">
-        <p>Institucion</p> 
+        <p>Institución</p> 
         <input id="institucion" type="text" class="form-control">          
         </select>
       </div>
 
       <div class="modal-footer">
         <button type="button" id="buscar" class="btn btn-default" >Buscar</button>
+        <button type="button" id="buscar" class="btn btn-default" >Limpiar</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           </div>
-      </div>
-      
+      </div> 
     </div>
   </div>
   </div>
 </div>
-    <!--fin modal buscar-->    
+    <!--fin modal buscar--> 
+     <p>&nbsp;</p>
+   <div class="row"> 
+   
+      <div class="col-sm-4"  style="background-color:#FFFFFF">
+      <p>Nombre Evaluador</p>
+     <input id="nombre_eva" type="text-align" class="form-control">
+      </div>
+
+      <div class="col-sm-4"  style="background-color:#FFFFFF">
+      <p>CVU Evaluador</p> 
+        <input type="text" id="cvu_evalu" class="form-control">
+      </div>
+
+       <div class="col-sm-4"  style="background-color:#FFFFFF">
+      <p>Fecha de Evaluación</p>
+     <input type="text-align" id="fecha_eva" class="form-control">   
+       </div>
+    </div>   
+ <p>&nbsp;</p>
+ <center>
+   
  <p>&nbsp;</p>
   <h3><center>Resultados de Busqueda</center></h3>            
  <p>&nbsp;</p>     
@@ -221,12 +257,24 @@
           <th>Fecha de Evaluación</th>
           <th>Estatus Dictamen</th>
           <th>Nivel</th>
+          <th>institución</th>
       </center></tr>
       <tbody id="resultados"/>
        </tbody>
 
   </table>
+ <!--paginacion-->
+ <p>&nbsp;</p>
+    <div class="paginacion">
+      <a href="#">&laquo;</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo;</a>
+    </div>
   <script src="js/filtros.js"></script>
   </body>
-
 </html>
